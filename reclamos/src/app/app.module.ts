@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'; //
 import { AppComponent } from './app.component';
+import { AdmiComponent } from './component/admi/admi.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent}, //pagina inicio
@@ -9,7 +10,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdmiComponent
   ],
   imports: [
     BrowserModule,
