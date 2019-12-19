@@ -8,6 +8,7 @@ import { RegistroComponent } from './registro/registro.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomecentralComponent}, //pagina inicio
+  { path: 'admi', component: AdmiComponent}, 
   { path: 'registro', component: RegistroComponent}
 
 
@@ -18,7 +19,7 @@ const appRoutes: Routes = [
     AppComponent,
     AdmiComponent,
     HomecentralComponent,
-    RegistroComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
