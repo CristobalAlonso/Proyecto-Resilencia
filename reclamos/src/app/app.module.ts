@@ -9,7 +9,7 @@ import { LoginComponent } from './component/login/login.component';
 const appRoutes: Routes = [
   { path: '', component: HomecentralComponent}, //pagina inicio
   { path: 'login', component: LoginComponent},
-
+  { path: 'registro', component: RegistroComponent}
 ];
 
 @NgModule({
@@ -18,6 +18,7 @@ const appRoutes: Routes = [
     AdmiComponent,
     HomecentralComponent,
     LoginComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
