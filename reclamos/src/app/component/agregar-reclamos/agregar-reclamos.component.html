@@ -1,0 +1,88 @@
+<html>
+    <body class="container">
+        <div class="row fff">
+            <div class="col-8">
+                <h1>Agregar reclamo</h1>
+            </div>
+        
+        </div>
+        <div class="row fff">
+            <div class="col-8">
+                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+            </div>
+            <div class="col-4" align="center">
+              <h2><label for=""> <input type="checkbox" > Mala atencion</label></h2>
+              
+        
+                <br> 
+                <h2><label for=""> <input type="checkbox" > Mala higiene</label></h2>
+        
+                <br> 
+                <h2><label for=""> <input type="checkbox" > Infraestructura y mobiliario</label></h2>
+        
+                <br>
+                <h2><label for=""> <input type="checkbox" > Mala atencion</label></h2>
+        
+                <br>
+    
+            </div>
+        </div>
+        <div class="row fff">
+            <div class="col-8">
+                <div class="dropdown">
+                    <button class="btn btn-secondary btn-block botondesp" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Lugar del suceso 
+                    </button>
+                    <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" >Baquedano</a>
+                      <a class="dropdown-item" >Estacion central</a>
+                      <a class="dropdown-item" >Tobalaba</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-4" align="center">
+              <h2><label for=""> <input type="checkbox" > Cobros indevidos</label></h2>
+              
+            </div>
+                <br>
+                <div class="col-8">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-block botondesp " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Nota de atención
+                        </button>
+                        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" >1</a>
+                          <a class="dropdown-item" >4</a>
+                          <a class="dropdown-item" >7</a>
+                        </div>
+                      </div>
+                      <br>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-block botondesp " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Nota del producto 
+                        </button>
+                        <div class="dropdown-menu col-12" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" >Action</a>
+                          <a class="dropdown-item" >Another action</a>
+                          <a class="dropdown-item" >Something else here</a>
+                        </div>
+                      </div>
+                      <br>
+                </div>
+                <div class="col-4" align="center">
+                  <h2><label for=""> <input type="checkbox" > Intoxicacion</label></h2>
+            
+                </div>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="exampleFormControlFile1">agregue su archivo aqui </label> <!-- cuantos archivos queremos colocar-->
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            <br><br>
+            <a href="/reclamos" target="_self"><button type="button" >enviar</button></a>
+            <br><br>
+            <a href="/login" target="_self"><button type="button" class="btn btn-light">Salir</button></a>
+          </div>
+        </form>
+    </body>
+</html>
