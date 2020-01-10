@@ -8,6 +8,8 @@ import { RegistroComponent} from './component/registro/registro.component';
 import { AgregarReclamosComponent } from './component/agregar-reclamos/agregar-reclamos.component';
 import { AddComponent } from './component/add/add.component';
 import { PortalEjecutivoComponent } from './component/portal-ejecutivo/portal-ejecutivo.component';
+import { PerfilusuarioComponent } from './component/perfilusuario/perfilusuario.component';
+import { HistorialreclamosComponent } from './component/historialreclamos/historialreclamos.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomecentralComponent}, //pagina inicio
@@ -15,6 +17,8 @@ const appRoutes: Routes = [
   { path: 'registro', component: RegistroComponent},
   { path: 'add', component: AddComponent},
   { path: 'portalEjecutivo', component: PortalEjecutivoComponent},
+  { path: 'perfilUsuario', component: PerfilusuarioComponent},
+  { path: 'historial', component: HistorialreclamosComponent},
   { path: 'reclamos', component: AgregarReclamosComponent}  
 ];
 
@@ -26,6 +30,8 @@ const appRoutes: Routes = [
     RegistroComponent,
     AgregarReclamosComponent,
     AddComponent,
+    PerfilusuarioComponent,
+    HistorialreclamosComponent,
     PortalEjecutivoComponent,
   ],
   imports: [
