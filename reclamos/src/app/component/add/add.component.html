@@ -1,0 +1,92 @@
+<html>
+    <body class="container">
+        
+        <div class="row 40">
+            <div class= "col"align= "center">
+                <h2>Portal Administrador </h2>
+            </div>
+        </div>
+        <div class= "col"align= "left">
+            <h4>Ejecutivos disponibles </h4>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Agregar
+        </button>
+  
+        <!-- Modal -->
+         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+             <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ingrese los datos del nuevo ejecutivo, porfavor.
+    
+            <div class="col-lg">
+
+                        <br><br>
+                        <input placeholder="Nombre" type="name" style="text-align: center;">
+                        <br><br>
+                        <input placeholder="Correo" type="email" style="text-align: center;">
+                        <br><br>
+                        <input placeholder="Teléfono" type="numero" style="text-align: center;">
+                        <br><br>
+                        <input placeholder="Contraseña" type="password" style="text-align: center;">
+                        <br><br>
+
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+        </div>
+         </div>
+        
+         <table class="table">
+            <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Claudia</td>
+                        <td>eje@reclamo.cl</td>
+                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
+    
+                    </tr>
+                    <tr>
+                        <td>Esmeralda</td>
+                        <td>eje@reclamo.cl</td>
+                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
+    
+                    </tr>
+                    <tr>
+                        <td>Cristobal</td>
+                        <td>eje@reclamo.cl</td>
+                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
+    
+                    </tr>
+                    <tr>
+                        <td>Nicol</td>
+                        <td>eje@reclamo.cl</td>
+                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
+    
+                    </tr>
+                </tbody>
+         </table>
+         <a href="/login" target="_self"><button type="button" class="btn btn-light" style="position: absolute; left: 15%;">Salir</button></a>
+    </body>
+
+    
+</html>

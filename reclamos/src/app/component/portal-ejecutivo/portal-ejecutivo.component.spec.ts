@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdmiComponent } from './admi.component';
+import { PortalEjecutivoComponent } from './portal-ejecutivo.component';
 
-describe('AdmiComponent', () => {
-  let component: AdmiComponent;
-  let fixture: ComponentFixture<AdmiComponent>;
+describe('PortalEjecutivoComponent', () => {
+  let component: PortalEjecutivoComponent;
+  let fixture: ComponentFixture<PortalEjecutivoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdmiComponent ]
+      declarations: [ PortalEjecutivoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdmiComponent);
+    fixture = TestBed.createComponent(PortalEjecutivoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
