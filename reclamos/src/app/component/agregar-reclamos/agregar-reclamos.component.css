@@ -1,11 +1,12 @@
 .container{
-    margin: 7%;
-    background-color: rgb(255, 255, 255);
-    opacity: 70%;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 .xl{
     margin-bottom: 2%;
-    background-color: rgb(51, 51, 51)s;
+    background-color: rgba(51, 51, 51, 0.13)s;
 }
 
 .xx{
@@ -15,4 +16,11 @@
 .botondesp{
     color: rgb(3, 3, 2);
     background-color: cornsilk;
+}
+
+.check{
+  tab-size: 5cm;
+}
+.navbar-expand{
+  align-content: flex-end !important;
 }
