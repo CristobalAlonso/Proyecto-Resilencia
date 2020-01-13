@@ -7,13 +7,19 @@ import { HomecentralComponent } from './component/HomeCentral/homecentral.compon
 import { LoginComponent } from './component/login/login.component';
 import { RegistroComponent} from './component/registro/registro.component';
 import { AgregarReclamosComponent } from './component/agregar-reclamos/agregar-reclamos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EjecutivoPerfilComponent } from './component/ejecutivo-perfil/ejecutivo-perfil.component';
+import { EjecutivoReclamosComponent } from './component/ejecutivo-reclamos/ejecutivo-reclamos.component'
 
 const appRoutes: Routes = [
   { path: '', component: HomecentralComponent}, //pagina inicio
   { path: 'login', component: LoginComponent},
   { path: 'registro', component: RegistroComponent},
   { path: 'admin', component: AdmiComponent},
-  { path: 'reclamos', component: AgregarReclamosComponent}  
+  { path: 'reclamos', component: AgregarReclamosComponent},
+  { path: '**', redirectTo: '' },
+  { path: 'perfilejecutivo', component: EjecutivoPerfilComponent},
+  { path: 'jecutivoReclamo', component: EjecutivoReclamosComponent}
 ];
 
 @NgModule({
@@ -24,9 +30,12 @@ const appRoutes: Routes = [
     LoginComponent,
     RegistroComponent,
     AgregarReclamosComponent,
+    EjecutivoPerfilComponent,
+    EjecutivoReclamosComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(//
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only

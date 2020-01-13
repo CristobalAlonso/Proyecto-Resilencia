@@ -1,4 +1,10 @@
 #cuerpo{
-    background: url("assets\fondo.jpeg");
-    background-size: auto;
+    background-image:url("assets/fondo/fondo1.jpg");
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-backdrop-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
