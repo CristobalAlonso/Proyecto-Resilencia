@@ -9,7 +9,8 @@ import { RegistroComponent} from './component/registro/registro.component';
 import { AgregarReclamosComponent } from './component/agregar-reclamos/agregar-reclamos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EjecutivoPerfilComponent } from './component/ejecutivo-perfil/ejecutivo-perfil.component';
-import { EjecutivoReclamosComponent } from './component/ejecutivo-reclamos/ejecutivo-reclamos.component'
+import { EjecutivoReclamosComponent } from './component/ejecutivo-reclamos/ejecutivo-reclamos.component';
+import { RegistroAdminComponent } from './component/registro-admin/registro-admin.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomecentralComponent}, //pagina inicio
@@ -17,9 +18,10 @@ const appRoutes: Routes = [
   { path: 'registro', component: RegistroComponent},
   { path: 'admin', component: AdmiComponent},
   { path: 'reclamos', component: AgregarReclamosComponent},
-  { path: '**', redirectTo: '' },
   { path: 'perfilejecutivo', component: EjecutivoPerfilComponent},
-  { path: 'jecutivoReclamo', component: EjecutivoReclamosComponent}
+  { path: 'jecutivoReclamo', component: EjecutivoReclamosComponent},
+  { path: 'code/CKS9333ASD/registroAdmin', component: RegistroAdminComponent},
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
     AgregarReclamosComponent,
     EjecutivoPerfilComponent,
     EjecutivoReclamosComponent,
+    RegistroAdminComponent,
   ],
   imports: [
     BrowserModule,

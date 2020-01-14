@@ -11,7 +11,7 @@
                     <input placeholder="Contraseña" type="password" (keyup)="passkeyup($event.target.value)" style="text-align: center; width: 75%;">
                     <label id="textRed" ><small style="color: red;">Contraseña o usuarios incorrecto</small></label>
                     <br><br>
-                    <button type="button" (click)="login()" class="btn btn-light">continuar</button>
+                    <button type="button" (click)="login3()" class="btn btn-light">continuar</button>
                     <br><br>
                     <small style="color: rgb(163, 162, 162);">¿olvidaste tu contraseña?</small>
                 </h6>
@@ -31,5 +31,16 @@
         </div>
     </div>
 </div>
-<br><br><br>
-<a href="" target="_self"><button type="button" class="btn btn-light" style="position: absolute; left: 50%;">Salir</button></a>
+<div>
+    <a href="" target="_self"><button type="button" class="btn btn-light" style="margin: 3%;">Salir</button></a> 
+    <button type="button" class="btn btn-light" style="text-align: right;" style="margin-left: 82%;" (click)='botonAdmin();'>Admin</button>
+</div>
+<div id="visible">
+    <div id="contenedor" style="position: absolute; top: 10%; left: 25%; background-color: rgb(184, 184, 184 ,0.8)">
+        <p style="color: white;">Ingresa el codigo de Admin</p>
+        <input type="password" placeholder="codigo" (keyup)=passAdminKeyup($event.target.value);>
+        <br><br>
+        <button (click)='ingresar();'>Ingresar</button>
+        <button (click)='botonSalirAdmin();'>Salir</button>
+    </div>
+</div>

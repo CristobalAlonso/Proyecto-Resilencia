@@ -33,5 +33,12 @@ export class LoginService {
     return aux;
   }
 
-  
+  public LoginAdmin(email: String, pass:String){
+    let body={
+      "contraseñaDto": pass,
+      "correoDto": email
+    };
+    let aux= this.http.post('http://localhost:2020/api/v1/Admin/login',body,this.headerOptions);
+    return aux;
+  }
 }

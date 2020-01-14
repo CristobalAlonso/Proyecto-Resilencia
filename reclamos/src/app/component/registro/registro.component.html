@@ -1,7 +1,7 @@
-<div style="background-color: rgb(255, 255, 255,0.5); ">
-    <div id="texto">
+<div style="background-color: rgb(255, 255, 255,0.2);" >
+    <div id="texto" style="text-align: center;">
         <h1 style="text-align: center;">Registro</h1>
-        <br><br>
+        <br>
         <pre>Correo             <input type="text" (keyup)="correoKeyUp($event.target.value)"></pre>
         <pre>Contraseña         <input type="password" (keyup)="contrasenaKeyUp($event.target.value)"></pre>
         <pre>Nombre             <input type="text" (keyup)="nombreKeyUp($event.target.value)"></pre>
@@ -10,8 +10,12 @@
         <pre>edad               <input type="text" (keyup)="nacimientoKeyUp($event.target.value)"></pre>
         <pre>Contacto           <input type="text" (keyup)="contactoKeyUp($event.target.value)"></pre>
         <br>
-        <button type="button" class="btn btn-light" (click)='registro()' style="position: absolute; left: 10%; background-color: black; color: white;">Registrarse</button>
-        <br><br>
+        <div style="text-align: center;">
+        <button type="button" class="btn btn-light" (click)='registro()' style=" background-color: black; color: white;">Registrarse</button>
+        </div>
+        <br>
     </div>
 </div>
-<a href="/login" target="_self"><button type="button" class="btn btn-light" style="position: absolute; left: 30%; color: black;">Salir</button></a>
+<div style="text-align: center;">
+    <a href="/login" target="_self"><button type="button" class="btn btn-light" style="color: black;">Salir</button></a>
+</div >
