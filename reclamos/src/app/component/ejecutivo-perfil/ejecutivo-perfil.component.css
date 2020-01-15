@@ -9,15 +9,11 @@ header {
   margin-bottom: 20px;
   z-index: 100;
 }
-nav {
-  float: center; 
-  display: block;
-}
 nav ul li a {
-  padding: 20px;
+padding: 20px;
 }
 nav ul li:hover {
-  background: #3ead47;
+background: #3ead47;
 }
 .wrapper {
     width: 90%;
