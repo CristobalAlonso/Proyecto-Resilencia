@@ -1,26 +1,35 @@
-.container{
-    background-color: rgba(255, 255, 255, 0);
-    margin-bottom: 7%;
-    margin-left: 7%;
-    margin-right: 7%;
-}
 .xl{
-    margin-bottom: 2%;
-    background-color: rgba(51, 51, 51, 0.13)s;
+  margin-bottom: 2%;
+  background-color: rgb(51, 51, 51)s;
 }
 
 .xx{
-    margin-top: 7%;
-    margin-bottom: 7%;
+  margin-top: 7%;
+  margin-bottom: 7%;
 }
 .botondesp{
-    color: rgb(3, 3, 2);
-    background-color: cornsilk;
+  color: rgb(3, 3, 2);
+  background-color: cornsilk;
 }
 
 .check{
-  tab-size: 5cm;
+tab-size: 5cm;
 }
-.navbar-expand{
-  align-content: flex-end !important;
+input[type=checkbox] {
+transform: scale(2.5);
+}
+
+nav ul li:hover {
+background: #a58ff0;
+}
+
+.container{
+  background-color: #faf2f2;
+}
+.caritas{
+  background-color: rgba(255, 228, 196, 0);
+  border: rgba(0, 0, 0, 0);
+}
+.boton:hover{
+  background-color:#a58ff0;
 }
