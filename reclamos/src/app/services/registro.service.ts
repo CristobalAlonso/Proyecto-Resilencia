@@ -27,7 +27,7 @@ public registroService(correo: String, contraseña: String, nombre: String, apel
     "numero": contacto,
     "rut": rut
   };
-  let aux= this.http.put('http://localhost:2020/api/v1/login',body,this.headerOptions);
+  let aux= this.http.post('http://localhost:2020/api/v1/login',body,this.headerOptions);
   return aux;
   }
 }

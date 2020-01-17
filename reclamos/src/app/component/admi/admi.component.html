@@ -1,131 +1,88 @@
-<body class="caja"> 
-   
-    <div class= "row titulo " >
-        <div class= "col"align= "center">
-            <h3>Portal Administrador </h3>
-        </div>
-    </div>
-    <div class= "row tituloej " >
-        <div class= "col"align= "left">
-            <h5>Ejecutivos disponibles </h5>
-        </div>
-            <!-- Button trigger modal -->
-            <div class= "row buttonA"> 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-             Agregar
-            </button>
-  
-             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                 <div class="modal-content">
-                  <div class="modal-header">
-                   <h5 class="modal-title" id="exampleModalLabel">Registrar nuevo ejecutivo</h5>
-                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                     <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-
-                    ...
-                    .....
-                    .....
-                    ....
-                    .
-                    .
-                    .
-
-                   ....
-                  </div>
-                  <div class="modal-footer">
-                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                   <button type="button" class="btn btn-primary">Guardar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-    </div>
-    <div class="row ejec">
-        <table class="col-8 table" align="center">
-            <thead>
-                <tr>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Correo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Claudia</td>
-                    <td>eje@reclamo.cl</td>
-                    <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-
-                </tr>
-                <tr>
-                    <td>Esmeralda</td>
-                    <td>eje@reclamo.cl</td>
-                    <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-
-                </tr>
-                <tr>
-                    <td>Cristobal</td>
-                    <td>eje@reclamo.cl</td>
-                    <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-
-                </tr>
-                <tr>
-                    <td>Nicol</td>
-                    <td>eje@reclamo.cl</td>
-                    <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
+<html>
+    <body class="container">
         
+        <div class="row 40">
+            <div class= "col"align= "center">
+                <h2>Portal Administrador </h2>
+            </div>
+        </div>
+        <div class= "col"align= "left">
+            <h4>Ejecutivos disponibles <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="margin-left: 2%;">Agregar</button></h4>
+        </div>
+  
+        <!-- Modal -->
+         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+             <div class="modal-dialog" role="document">
+      <div class="modal-content" style="background-color: rgb(255, 255, 255);">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Nuevo Ejecutivo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ingrese los datos del nuevo ejecutivo, porfavor.
+    
+            <div class="col-lg">
 
-</body>
+                        <br><br>
+                        <input id="nombreR" #filterName name='filterName' placeholder="Nombre" type="text" (keyup)="nombreKeyup($event.target.value)" style="text-align: center;">
+                        <br><br>
+                        <input id="apellidoR" placeholder="Apellido" type="text" (keyup)='apellidoKeyup($event.target.value)' style="text-align: center;">
+                        <br><br>
+                        <input id="correoR" placeholder="Correo" type="email" (keyup)='correoKeyup($event.target.value)' style="text-align: center;">
+                        <br><br>
+                        <input id="passR" placeholder="Contraseña" type="password" (keyup)='passKeyup($event.target.value)' style="text-align: center;">
+                        <br><br>
+                        <div class="btn-group">
+                            <button id="tituloBoton" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                              Sección <span class="caret"></span>
+                            </button>
+                          
+                            <ul class="dropdown-menu" role="menu">
+                              <li> <button id="SeccionA" (click)="seccionA();">Sección A</button> </li>
+                              <li> <button id="SeccionB" (click)="seccionB();">Sección B</button></li>
+                            </ul>
+                          </div>
+                        <br><br>
+
+            </div>
 
 
-<body class="caja2">
-    <div class= "row recl " >
-    <div class= "col"align= "center">
-        <h3>Reclamos registrados </h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='registroEjecutivo()'>Guardar</button>
+        </div>
+      </div>
+        </div>
+         </div>
+        <div id="fondotras">
+          <table class="table">
+              <thead class="thead-dark">
+                      <tr>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellido</th>
+                          <th scope="col">Correo</th>
+                          <th scope="col">Permiso</th>
+                          <th scope="col">Seccion A</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of user">
+                          <td>{{item.name}}</td>
+                          <td>{{item.lastname}}</td>
+                          <td>{{item.mail}}</td>
+                          <td>{{item.permission}}</td>
+                          <td>{{item.a_section}}</td>
+                          <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
+                      </tr>
+                  </tbody>
+          </table>
+        </div>
+         <a href="/login" target="_self"><button type="button" class="btn btn-light" style="position: absolute; left: 15%;">Salir</button></a>
+    </body>
 
-
-    </div>
-
-
-   <div class="row reclamos">
-     <table class="col-4 table" align="center">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Reclamo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="background-color: rgba(189, 45, 45, 0.911);">#001</td>
-                <td>Mal servicio</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgba(129, 13, 120, 0.911);">#002</td>
-                <td>Higiene</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgba(250, 235, 99, 0.911);">#003</td>
-                <td>Cobro indevido</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgba(92, 230, 65, 0.911);">#004</td>
-                <td>Mala atención</td>
-            </tr>
-        </tbody>
-        </table>
-    </div>
-    </div>
-    <img src="assets\grafico.png" alt="" style="width: 30%; height: 60%; position: absolute; left: 50%; top: 100%;">
-    <a href="/login" target="_self"><button type="button" class="btn btn-light" style="position: fixed; left: 10%;">Salir</button></a>
-</body>
+    
+</html>

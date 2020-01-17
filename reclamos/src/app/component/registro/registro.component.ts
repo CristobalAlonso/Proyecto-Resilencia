@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
+  private a_section:boolean;
   private correo:string;
   private contraseña:string;
   private nombre:string;
@@ -22,6 +23,10 @@ export class RegistroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  public a_sectionKeyup(value:boolean){
+    this.a_section=value;
   }
 
   public correoKeyUp(value:string){
