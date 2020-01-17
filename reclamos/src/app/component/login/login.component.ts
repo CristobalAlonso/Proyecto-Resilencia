@@ -1,6 +1,7 @@
 import { Component, OnInit, ɵConsole } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from '../../services/login.service'
+import { LoginService } from '../../services/login.service';
+import { User } from '../../model/User.model';
 
 @Component({
   selector: 'app-login',
@@ -11,13 +12,14 @@ export class LoginComponent implements OnInit {
   pass:string;
   email:string;
   code:String;
-
+  private user:Array<User>;
 
 
   constructor(
     private router: Router,
-    private loginService: LoginService   
+    private loginService: LoginService,
     ) { }
+    
   emailkeyup(value: string){
     this.email=value;
   }
@@ -44,23 +46,6 @@ export class LoginComponent implements OnInit {
     doc.visibility="hidden";
   }
 
-  login(){
-    let response:any;
-    let doc=document.getElementById('textRed').style;
-    let obs=this.loginService.loginService(this.email,this.pass);
-    console.log(response);
-    if(response){
-      this.router.navigate(['/admin']);
-    }else{
-        obs.subscribe(validation => {
-          if(validation){
-           this.router.navigate(['/reclamos']);
-          }else{
-            doc.visibility='visible';
-          }
-      });
-    }
-  }
   login2(){
     let datos:any;
     let obs=this.loginService.loginService2(this.email);

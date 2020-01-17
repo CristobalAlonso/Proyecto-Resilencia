@@ -7,19 +7,15 @@
             </div>
         </div>
         <div class= "col"align= "left">
-            <h4>Ejecutivos disponibles </h4>
+            <h4>Ejecutivos disponibles <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" style="margin-left: 2%;">Agregar</button></h4>
         </div>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-            Agregar
-        </button>
   
         <!-- Modal -->
          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
              <div class="modal-dialog" role="document">
-      <div class="modal-content">
+      <div class="modal-content" style="background-color: rgb(255, 255, 255);">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle">Nuevo Ejecutivo</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -30,13 +26,25 @@
             <div class="col-lg">
 
                         <br><br>
-                        <input placeholder="Nombre" type="name" style="text-align: center;">
+                        <input id="nombreR" #filterName name='filterName' placeholder="Nombre" type="text" (keyup)="nombreKeyup($event.target.value)" style="text-align: center;">
                         <br><br>
-                        <input placeholder="Correo" type="email" style="text-align: center;">
+                        <input id="apellidoR" placeholder="Apellido" type="text" (keyup)='apellidoKeyup($event.target.value)' style="text-align: center;">
                         <br><br>
-                        <input placeholder="Teléfono" type="numero" style="text-align: center;">
+                        <input id="correoR" placeholder="Correo" type="email" (keyup)='correoKeyup($event.target.value)' style="text-align: center;">
                         <br><br>
-                        <input placeholder="Contraseña" type="password" style="text-align: center;">
+                        <input id="passR" placeholder="Contraseña" type="password" (keyup)='passKeyup($event.target.value)' style="text-align: center;">
+                        <br><br>
+                        <div class="btn-group">
+                            <button id="tituloBoton" type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                              Sección <span class="caret"></span>
+                            </button>
+                          
+                            <ul class="dropdown-menu" role="menu">
+                              <li> <button id="SeccionA" (click)="seccionA();">Sección A</button> </li>
+                              <li> <button id="SeccionB" (click)="seccionB();">Sección B</button></li>
+                            </ul>
+                          </div>
                         <br><br>
 
             </div>
@@ -45,46 +53,34 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='registroEjecutivo()'>Guardar</button>
         </div>
       </div>
         </div>
          </div>
-        
-         <table class="table">
-            <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Correo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Claudia</td>
-                        <td>eje@reclamo.cl</td>
-                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-    
-                    </tr>
-                    <tr>
-                        <td>Esmeralda</td>
-                        <td>eje@reclamo.cl</td>
-                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-    
-                    </tr>
-                    <tr>
-                        <td>Cristobal</td>
-                        <td>eje@reclamo.cl</td>
-                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-    
-                    </tr>
-                    <tr>
-                        <td>Nicol</td>
-                        <td>eje@reclamo.cl</td>
-                        <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
-    
-                    </tr>
-                </tbody>
-         </table>
+        <div id="fondotras">
+          <table class="table">
+              <thead class="thead-dark">
+                      <tr>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellido</th>
+                          <th scope="col">Correo</th>
+                          <th scope="col">Permiso</th>
+                          <th scope="col">Seccion A</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let item of user">
+                          <td>{{item.name}}</td>
+                          <td>{{item.lastname}}</td>
+                          <td>{{item.mail}}</td>
+                          <td>{{item.permission}}</td>
+                          <td>{{item.a_section}}</td>
+                          <button type="button" class="btn btn-primary btn-sm">Eliminar</button>
+                      </tr>
+                  </tbody>
+          </table>
+        </div>
          <a href="/login" target="_self"><button type="button" class="btn btn-light" style="position: absolute; left: 15%;">Salir</button></a>
     </body>
 
