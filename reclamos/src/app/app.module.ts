@@ -11,15 +11,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { EjecutivoPerfilComponent } from './component/ejecutivo-perfil/ejecutivo-perfil.component';
 import { EjecutivoReclamosComponent } from './component/ejecutivo-reclamos/ejecutivo-reclamos.component';
 import { RegistroAdminComponent } from './component/registro-admin/registro-admin.component';
+import { HistorialreclamosComponent } from './component/historialreclamos/historialreclamos.component';
+import { PerfilusuarioComponent } from './component/perfilusuario/perfilusuario.component';
+import { PortalEjecutivoComponent } from './component/portal-ejecutivo/portal-ejecutivo.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomecentralComponent}, //pagina inicio
   { path: 'login', component: LoginComponent},
   { path: 'registro', component: RegistroComponent},
   { path: 'admin', component: AdmiComponent},
-  { path: 'reclamos', component: AgregarReclamosComponent},
-  { path: 'perfilejecutivo', component: EjecutivoPerfilComponent},
-  { path: 'jecutivoReclamo', component: EjecutivoReclamosComponent},
+  { path: 'usuario/reclamos', component: AgregarReclamosComponent},
+  { path: 'ejecutivo/perfil', component: EjecutivoPerfilComponent},
+  { path: 'ejecutivoReclamo', component: EjecutivoReclamosComponent},
+  { path: 'portalEjecutivo', component: PortalEjecutivoComponent},
+  { path: 'usuario/perfil', component: PerfilusuarioComponent},
+  { path: 'historial', component: HistorialreclamosComponent},
   { path: 'code/CKS9333ASD/registroAdmin', component: RegistroAdminComponent},
   { path: '**', redirectTo: '' },
 ];
@@ -35,6 +41,9 @@ const appRoutes: Routes = [
     EjecutivoPerfilComponent,
     EjecutivoReclamosComponent,
     RegistroAdminComponent,
+    HistorialreclamosComponent,
+    PerfilusuarioComponent,
+    PortalEjecutivoComponent,
   ],
   imports: [
     BrowserModule,
