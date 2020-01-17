@@ -14,6 +14,8 @@ import { RegistroAdminComponent } from './component/registro-admin/registro-admi
 import { HistorialreclamosComponent } from './component/historialreclamos/historialreclamos.component';
 import { PerfilusuarioComponent } from './component/perfilusuario/perfilusuario.component';
 import { PortalEjecutivoComponent } from './component/portal-ejecutivo/portal-ejecutivo.component';
+import { EjecutivoAComponent } from './component/ejecutivo-a/ejecutivo-a.component';
+import { EjecutivoBComponent } from './component/ejecutivo-b/ejecutivo-b.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomecentralComponent}, //pagina inicio
@@ -26,6 +28,8 @@ const appRoutes: Routes = [
   { path: 'portalEjecutivo', component: PortalEjecutivoComponent},
   { path: 'usuario/perfil', component: PerfilusuarioComponent},
   { path: 'historial', component: HistorialreclamosComponent},
+  { path: 'ejecutivoA', component:EjecutivoAComponent},
+  { path: 'ejecutivoB', component:EjecutivoBComponent},
   { path: 'code/CKS9333ASD/registroAdmin', component: RegistroAdminComponent},
   { path: '**', redirectTo: '' },
 ];
@@ -44,6 +48,8 @@ const appRoutes: Routes = [
     HistorialreclamosComponent,
     PerfilusuarioComponent,
     PortalEjecutivoComponent,
+    EjecutivoAComponent,
+    EjecutivoBComponent,
   ],
   imports: [
     BrowserModule,
