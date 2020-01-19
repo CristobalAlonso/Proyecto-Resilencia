@@ -9,7 +9,6 @@ import { RegistroComponent} from './component/registro/registro.component';
 import { AgregarReclamosComponent } from './component/agregar-reclamos/agregar-reclamos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EjecutivoPerfilComponent } from './component/ejecutivo-perfil/ejecutivo-perfil.component';
-import { EjecutivoReclamosComponent } from './component/ejecutivo-reclamos/ejecutivo-reclamos.component';
 import { RegistroAdminComponent } from './component/registro-admin/registro-admin.component';
 import { HistorialreclamosComponent } from './component/historialreclamos/historialreclamos.component';
 import { PerfilusuarioComponent } from './component/perfilusuario/perfilusuario.component';
@@ -24,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'admin', component: AdmiComponent},
   { path: 'usuario/reclamos', component: AgregarReclamosComponent},
   { path: 'ejecutivo/perfil', component: EjecutivoPerfilComponent},
-  { path: 'ejecutivoReclamo', component: EjecutivoReclamosComponent},
+
   { path: 'portalEjecutivo', component: PortalEjecutivoComponent},
   { path: 'usuario/perfil', component: PerfilusuarioComponent},
   { path: 'historial', component: HistorialreclamosComponent},
@@ -43,7 +42,6 @@ const appRoutes: Routes = [
     RegistroComponent,
     AgregarReclamosComponent,
     EjecutivoPerfilComponent,
-    EjecutivoReclamosComponent,
     RegistroAdminComponent,
     HistorialreclamosComponent,
     PerfilusuarioComponent,

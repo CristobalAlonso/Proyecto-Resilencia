@@ -24,7 +24,8 @@ background: #a58ff0;
 }
 
 .container{
-  background-color: #faf2f2;
+  background-color: white;
+  -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
 }
 .caritas{
   background-color: rgba(255, 228, 196, 0);

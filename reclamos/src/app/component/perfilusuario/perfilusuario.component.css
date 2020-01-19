@@ -4,11 +4,14 @@
   margin-top: 5%;
   background-color:rgb(255, 255, 255);
   padding: 2%;
+ 
 }
 .container{
-  margin-left: 25%;
-  margin-right: 25%;
+
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 5%;
+  -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
   
 }
 nav ul li:hover {

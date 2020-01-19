@@ -10,3 +10,10 @@ nav ul li:hover {
     color: #fff;
     
     }
+    .container{
+      margin-left: 15%;
+      margin-right: 7%;
+      margin-bottom: 7%;
+      -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
+     
+  }

@@ -5,6 +5,8 @@
   margin-top: 5%;
   background-color:rgba(235, 207, 207, 0.637);
   padding: 3%;
+  -webkit-box-shadow: 8px 6px 4px -1px rgba(0,0,0,0.43);
+  
 }
 .container {
   background-color: rgba(255, 255, 255, 0);
@@ -25,3 +27,9 @@
 background-color: rgb(109, 26, 98); 
 color: #fff;
 }
+.card{
+  -webkit-box-shadow: 3px 2px 1px -1px rgba(0,0,0,0.43);
+}
+nav ul li:hover {
+  background: #a58ff0;
+  }
