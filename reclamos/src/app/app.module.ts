@@ -24,9 +24,9 @@ const appRoutes: Routes = [
   { path: 'usuario/reclamos', component: AgregarReclamosComponent},
   { path: 'ejecutivo/perfil', component: EjecutivoPerfilComponent},
 
-  { path: 'portalEjecutivo', component: PortalEjecutivoComponent},
+  { path: 'ejecutivo', component: PortalEjecutivoComponent},
   { path: 'usuario/perfil', component: PerfilusuarioComponent},
-  { path: 'historial', component: HistorialreclamosComponent},
+  { path: 'usuario/historial', component: HistorialreclamosComponent},
   { path: 'ejecutivoA', component:EjecutivoAComponent},
   { path: 'ejecutivoB', component:EjecutivoBComponent},
   { path: 'code/CKS9333ASD/registroAdmin', component: RegistroAdminComponent},

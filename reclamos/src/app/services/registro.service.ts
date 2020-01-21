@@ -17,7 +17,7 @@ export class RegistroService {
   constructor(private http: HttpClient) { }
 
   
-public registroService(correo: String, contraseña: String, nombre: String, apellido: String, rut: String, contacto, edad){
+public registroService(correo: String, contraseña: String, nombre: String, apellido: String, rut: String, contacto:String, edad: number){
   let body={
     "apellido": apellido,
     "contraseña": contraseña,
@@ -27,7 +27,7 @@ public registroService(correo: String, contraseña: String, nombre: String, apel
     "numero": contacto,
     "rut": rut
   };
-  let aux= this.http.put('http://localhost:2020/api/v1/login',body,this.headerOptions);
+  let aux= this.http.post('http://localhost:2020/api/v1/login',body,this.headerOptions)
   return aux;
   }
 }
