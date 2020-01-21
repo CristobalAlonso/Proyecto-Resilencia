@@ -9,11 +9,11 @@
                     <input placeholder="Email@" type="email" (keyup)="emailkeyup($event.target.value)" style="text-align: center; width: 75%;">
                     <br><br>
                     <input placeholder="Contraseña" type="password" (keyup)="passkeyup($event.target.value)" style="text-align: center; width: 75%;">
-                    <label id="textRed" ><small style="color: red;">Contraseña o usuarios incorrecto</small></label>
+                    <label id="textRed" ><small style="color: red;">Contraseña o usuario incorrecto</small></label>
                     <br><br>
-                    <button type="button" (click)="login3()" class="btn btn-light">continuar</button>
+                    <button type="button" (click)="login3()" class="btn btn-light">Continuar</button>
                     <br><br>
-                    <small style="color: rgb(163, 162, 162);">¿olvidaste tu contraseña?</small>
+                    <small style="color: rgb(163, 162, 162);">¿Olvidaste tu contraseña?</small>
                 </h6>
             </div>
         </div>
@@ -23,9 +23,9 @@
                 <br><br>
                 <h6 id="texto">Registrar
                     <br><br>
-                    <p>al registrarse como un nuevo usuario, usted podra ingresar y ver el estado de sus tramites</p>
+                    <p>Al registrarse como un nuevo usuario, usted podrá ingresar y ver el estado de su reclamo</p>
                     <br><br>
-                    <a href="/registro" target="_self"><button type="button" class="btn btn-light">continuar</button></a>
+                    <a href="/registro" target="_self"><button type="button" class="btn btn-light">Continuar</button></a>
                 </h6>
             </div>
         </div>
@@ -33,11 +33,11 @@
 </div>
 <div>
     <a href="" target="_self"><button type="button" class="btn btn-light" style="margin: 3%;">Salir</button></a> 
-    <button type="button" class="btn btn-light" style="text-align: right;" style="margin-left: 82%;" (click)='botonAdmin();'>Admin</button>
+    <button type="button" class="btn btn-light" style="text-align: right;" style="margin-left: 82%;" (click)='botonAdmin();'><img src="https://img.icons8.com/ios-filled/50/000000/test-account.png"></button>
 </div>
 <div id="visible">
     <div id="contenedor" style="position: absolute; top: 10%; left: 25%; background-color: rgb(184, 184, 184 ,0.8)">
-        <p style="color: white;">Ingresa el codigo de Admin</p>
+        <p style="color: white;">Ingresa tu código, porfavor</p>
         <input type="password" placeholder="codigo" (keyup)=passAdminKeyup($event.target.value);>
         <br><br>
         <button (click)='ingresar();'>Ingresar</button>
