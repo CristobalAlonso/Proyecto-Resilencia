@@ -9,9 +9,9 @@ import { User } from '../../model/User.model';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  pass:string;
-  email:string;
-  code:String;
+  private pass:string;
+  private email:string;
+  private code:String;
   private user:Array<User>;
 
 
@@ -59,16 +59,23 @@ export class LoginComponent implements OnInit {
     let doc=document.getElementById('textRed').style;
     let obs=this.loginService.LoginAdmin(this.email,this.pass);
     let obs2=this.loginService.loginService(this.email,this.pass);
+    let obs3=this.loginService.loginEjecutivo(this.email,this.pass);
     obs.subscribe(res =>{
       if(res){
         this.router.navigate(['/admin']);
       }else{
-        obs2.subscribe(res2 =>{
-          if(res2){
-            this.router.navigate(['/reclamos']);
+        obs3.subscribe(res3 =>{
+          if(res3){
+            this.router.navigate(['/ejecutivoReclamo']);
           }else{
-             doc.visibility='visible';
-           }
+            obs2.subscribe(res2=>{
+              if(res2){
+                this.router.navigate(['/usuario/reclamos']);
+              }else{
+                doc.visibility='visible';
+              }
+            });
+          }
         });
       }
     });

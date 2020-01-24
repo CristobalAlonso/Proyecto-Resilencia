@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
 import { Router } from '@angular/router';
 import { User } from '../../model/User.model';
+import { ReclamoModel } from '../../model/Reclamo.model';
 
 @Component({
   selector: 'app-admi',
@@ -15,6 +16,12 @@ export class AdmiComponent implements OnInit {
   private correo:String;
   private pass:String;
   private user:Array<User>;
+  private reclamo:Array<ReclamoModel>;
+  private contador1:any;
+  private contador2:any;
+  private contador3:any;
+  private contador4:any;
+  private porcentajes:any;
   
 
   constructor(
@@ -24,6 +31,7 @@ export class AdmiComponent implements OnInit {
 
   ngOnInit() {
     this.reqInfoEjecutivo();
+    this.reqInfoReclamos();
   }
 
   seccionA(){
@@ -70,6 +78,33 @@ export class AdmiComponent implements OnInit {
   reqInfoEjecutivo(){
     this.adminService.InfoEjecutivo().subscribe(res =>{
       this.user=res;
+    });
+  }
+  reqInfoReclamos(){
+    this.adminService.InfoReclamo().subscribe(res2 =>{
+      this.reclamo=res2;
+      this.contador1=0;
+      this.contador2=0;
+      this.contador3=0;
+      this.contador4=0;
+      for(let i in this.reclamo){
+        if(this.reclamo[i].lugar=='Baquedano'){
+          this.contador1=this.contador1+1;
+        }
+        if(this.reclamo[i].lugar=='Estacion central'){
+          this.contador2=this.contador2+1;
+        }
+        if(this.reclamo[i].lugar=='Tobalaba'){
+          this.contador3=this.contador3+1;
+        }
+        this.contador4=this.contador4+1
+      }
+
+      this.contador1=(this.contador1*100)/this.contador4
+      this.contador2=(this.contador2*100)/this.contador4
+      this.contador3=(this.contador3*100)/this.contador4
+      this.porcentajes="Baquedano= "+Math.floor(this.contador1)+"%, Estacion central= "+Math.floor(this.contador2)+"%, Tobalaba= "+Math.floor(this.contador3)+"%";
+      document.getElementById('text%').innerText=this.porcentajes;
     });
   }
 }

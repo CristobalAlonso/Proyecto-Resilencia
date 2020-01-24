@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../model/User.model';
+import { ReclamoModel } from '../model/Reclamo.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -36,4 +37,7 @@ export class AdminService {
     return this.http.get<User[]>('http://localhost:2020/api/v1/Ejecutivo');
   }
 
+  public InfoReclamo():Observable<ReclamoModel[]>{
+    return this.http.get<ReclamoModel[]>('http://localhost:2020/api/v1/Reclamo');
+  }
 }
